@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <main class="whole-page-container">
+      <aside class="human-score-column">
+        <h2 class="human-title">Human</h2>
+        <h3 class="human-token"></h3>
+        <p class="human-score-number"></p>
+      </aside>
+      <section class="game-board">
+        <div class="choose-game-mode-view">
+          <div class="choose-game-section">
+            <h2 class="choose-game-title">Which game would you like to play?</h2>
+          </div>
+          <div class="choose-game-section">
+            <button class="normal-game-button">Let's play Rock,Paper,Scissors</button>
+            <p class="normal-game-rules">
+              <ul>
+                <li> Paper > <b>Rock</b> > Scissors </li>
+                <li> Scissors > <b>Paper</b> > Rock </li>
+                <li> Rock > <b>Scissors</b> > Paper </li>
+              </ul>
+            </p>
+          </div>
+          <div class="choose-game-section">
+            <button class="advanced-game-button">Let's play Rock,Paper,Scissors,Spock,Lizard</button>
+            <p class="advanced-game-rules">
+              <ul>
+                <li> Spock & Paper > <b>Rock</b> > Scissors & Lizard </li>
+                <li> Scissors & Lizard > <b>Paper</b> > Spock & Rock </li>
+                <li> Spock & Rock > <b>Scissors</b> > Lizard & Paper </li>
+                <li> Scissors & Rock > <b>Lizard</b> > Spock & Paper </li>
+                <li> Paper & Lizard > <b>Spock</b> > Rock & Scissors </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="normal-game-view hidden">
+          <h1 class="normal-game-title">Rock, Paper, Scissors</h1>
+          <section class="normal-icons-container" >
+            <img class="rock-icon" id="rock" src="./assets/geodude.png" />
+            <img class="scissors-icon" id="scissors" src="./assets/scissors.png" />
+            <img class="paper-icon" id="paper" src="./assets/paper.png" />
+        </div>
+      </section>
+      </section>
+      <aside class="computer-score-column">
+        <h2 class="computer-title">Computer</h2>
+        <h3 class="computer-token"></h3>
+        <p class="computer-score-number"></p>
+      </aside>
+    </main>
+    <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
