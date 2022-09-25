@@ -7,9 +7,9 @@
   </head>
   <body>
     <main class="whole-page-container">
-      <aside class="human-score-column">
+      <aside class="human-score-column score-column">
         <h2 class="human-title">Human</h2>
-        <h3 class="human-token"></h3>
+        <h3 class="human-token score-token"></h3>
         <p class="human-score-number"></p>
       </aside>
       <section class="game-board">
@@ -40,16 +40,31 @@
             </p>
           </div>
         </div>
+        <div class="result-view hidden">
+        </div>
         <div class="normal-game-view hidden">
           <h1 class="normal-game-title">Rock, Paper, Scissors</h1>
           <section class="normal-icons-container" >
-            <img class="rock-icon" id="rock" src="./assets/geodude.png" />
-            <img class="scissors-icon" id="scissors" src="./assets/scissors.png" />
-            <img class="paper-icon" id="paper" src="./assets/paper.png" />
+            <img class="normal-rock-icon" id="rock" src="./assets/geodude.png" />
+            <img class="normal-paper-icon" id="paper" src="./assets/paper.png" />
+            <img class="normal-scissors-icon" id="scissors" src="./assets/scissors.png" />
+        </div>
+        <div class="advanced-game-view hidden">
+          <h1 class="advanced-game-title">Rock, Paper, Scissors, Lizard, Spock</h1>
+          <section class="normal-icons-container" >
+            <div class="first-row-icons">
+              <img class="advanced-rock-icon" id="rock" src="./assets/geodude.png" />
+              <img class="advanced-paper-icon" id="paper" src="./assets/paper.png" />
+              <img class="advanced-scissors-icon" id="scissors" src="./assets/scissors.png" />
+            </div>
+            <div class="second-row-icons">
+              <img class="lizard-icon" id="lizard" src="./assets/lizard.png"/>
+              <img class="spock-icon" id="spock" src="./assets/spock.png"/>
+            </div>
         </div>
       </section>
       </section>
-      <aside class="computer-score-column">
+      <aside class="computer-score-column score-column">
         <h2 class="computer-title">Computer</h2>
         <h3 class="computer-token"></h3>
         <p class="computer-score-number"></p>

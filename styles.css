@@ -10,10 +10,17 @@
   flex-direction: row;
 }
 
-.human-score-column {
+.score-column {
   height: 100vh;
   width: 15vw;
   background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score-token {
+  font-size: 3em
 }
 
 .game-board {
@@ -25,23 +32,42 @@
   justify-content: space-around;
 }
 
-.computer-score-column {
-  height:100vh;
+.normal-rock-icon {
+  height: 15vh;
+  width: 20vw;
+}
+
+.normal-paper-icon {
+  height: 20vh;
+  width: 10vw;
+}
+
+.normal-scissors-icon {
+  height: 15vh;
+  width: 20vw;
+}
+
+.advanced-rock-icon {
+  height: 15vh;
+  width: 20vw;
+}
+
+.advanced-scissors-icon {
+  height: 15vh;
+  width: 20vw;
+}
+
+.advanced-paper-icon {
+  height: 20vh;
+  width: 10vw;
+}
+
+.spock-icon {
+  height: 15vh;
   width: 15vw;
-  background-color: purple;
 }
 
-.rock-icon {
-  height: 15vh;
-  width: 20vw;
-}
-
-.scissors-icon {
-  height: 15vh;
-  width: 20vw;
-}
-
-.paper-icon {
+.lizard-icon {
   height: 20vh;
   width: 10vw;
 }
@@ -60,6 +86,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.normal-game-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .choose-game-section{
