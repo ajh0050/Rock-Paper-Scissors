@@ -14,10 +14,8 @@ I built a web application that will allow a user to play classic rock, paper, sc
 
 # Preview of App:
 Below you can see the functionality of the app as I play against the computer and switch between different views.
-<a href="https://www.loom.com/share/f1a48d0eda6f48858c845731f78beda2">
-    <p>Loom Message - 27 September 2022 - Watch Video</p>
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f1a48d0eda6f48858c845731f78beda2-1664311815410-with-play.gif">
-</a>
+![Rock,Paper,ScissorsGIF](https://user-images.githubusercontent.com/36003417/192635167-8c5e7ce3-b848-48b7-8e23-95dce761cb9c.gif)
+
 
 # Context:
 Working solo on the 5th week of Mod1 classes at Turing, I invested 25 hours to create this application's functionality from scratch using HTML,CSS, and Javascript.
