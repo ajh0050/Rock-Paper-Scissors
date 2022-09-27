@@ -5,17 +5,25 @@
 .whole-page-container {
   width: 100vw;
   height: 100vh;
-  background-color: blue;
   display: flex;
   flex-direction: row;
+  color: white;
 }
 
 .score-column {
   height: 100vh;
   width: 15vw;
-  background-color: pink;
+  background-color: #E47AEE;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.score-display {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -23,13 +31,97 @@
   font-size: 3em
 }
 
+.score-contents {
+  font-size: 1.3rem;
+}
+
+.button {
+  background-color: #9407A1;
+  border: none;
+  padding: 15px;
+  color: white;
+}
+
+.button:hover {
+  cursor:pointer;
+  background-color: white;
+  color: black;
+}
+
+.icon:hover {
+  cursor:pointer;
+}
+
 .game-board {
   height: 100vh;
   width: 70vw;
-  background-color: orange;
+  background-color: #BF55C9;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.choose-game-mode-view {
+  height: 100vh;
+  width: 70vw;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.choose-game-section{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choose-game-title {
+  font-size: 5rem;
+}
+
+.under-title-text{
+  font-size: 1.5rem;
+}
+
+.game-title-button {
+  padding:15px;
+  font-size: 1.2rem;
+}
+
+.game-title-section {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.result-view {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-title {
+  font-size: 3rem;
+}
+
+.result-choices {
+  font-size: 1.8rem;
+}
+
+.normal-game-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:100vh;
+  justify-content: space-evenly;
+}
+
+.normal-icons-container {
+  display:flex;
+  width: 70vw;
+  justify-content: space-evenly;
 }
 
 .normal-rock-icon {
@@ -59,6 +151,7 @@
   width:70vw;
   align-items: center;
 }
+
 .advanced-icon-row {
   display:flex;
   width: 70vw;
@@ -88,50 +181,6 @@
 .lizard-icon {
   height: 20vh;
   width: 10vw;
-}
-
-.icons-container{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 90vh;
-}
-
-.choose-game-mode-view {
-  height: 100vh;
-  width: 70vw;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.normal-game-view {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height:100vh;
-  justify-content: space-evenly;
-}
-
-.normal-icons-container {
-  display:flex;
-  width: 70vw;
-  justify-content: space-evenly;
-}
-
-.rules-and-title {
-  width:70vw;
-  display:flex;
-  flex-direction: column;
-  height: 30vw;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.choose-game-section{
-  display:flex;
-  flex-direction: column;
 }
 
 .hidden {

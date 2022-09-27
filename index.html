@@ -8,81 +8,79 @@
   <body>
     <main class="whole-page-container">
       <aside class="score-column">
-        <div class="human-score-column">
-          <h2 class="human-title">Human</h2>
-          <h3 class="human-token score-token"></h3>
-          <p class="human-score-number"></p>
+        <div class="human-score-column score-display">
+          <h3 class="human-token score-token">🤓</h3>
+          <p class="human-title score-contents">Human</p>
+          <p class="human-score-number score-contents">Wins: 0</p>
         </div>
-        <button class="change-game-button hidden">CHANGE GAME?</button>
+        <button class="change-game-button hidden button">CHANGE GAME?</button>
       </aside>
       <section class="game-board">
         <div class="choose-game-mode-view">
-          <div class="choose-game-section">
-            <h2 class="choose-game-title">Which game would you like to play?</h2>
-          </div>
-          <div class="choose-game-section">
-            <button class="normal-game-button">
-              <h2 class="game-mode-title">CLASSIC</h2>
-              <p class="normal-game-rules">
+          <section class="choose-game-section">
+            <h2 class="choose-game-title">Rock, Paper, Scissors</h2>
+            <p class="under-title-text">Choose your game!</p>
+          </section>
+          <section class="choose-game-section">
+            <button class="normal-game-button button">
+              <p class="game-title-button">🪨  CLASSIC ✂️</p>
+              <p>
                 Paper > <b>Rock</b> > Scissors<br />
                 Scissors > <b>Paper</b> > Rock<br />
                 Rock > <b>Scissors</b> > Paper<br />
               </p>
             </button>
-          </div>
-          <div class="choose-game-section">
-            <button class="advanced-game-button">
-              <h2 class="game-mode-title">Advanced</h2>
-              <p class="advanced-game-rules">
-                <ul>
-                  <li> Spock & Paper > <b>Rock</b> > Scissors & Lizard </li>
-                  <li> Scissors & Lizard > <b>Paper</b> > Spock & Rock </li>
-                  <li> Spock & Rock > <b>Scissors</b> > Lizard & Paper </li>
-                  <li> Scissors & Rock > <b>Lizard</b> > Spock & Paper </li>
-                  <li> Paper & Lizard > <b>Spock</b> > Rock & Scissors </li>
-                </ul>
+          </section>
+          <section class="choose-game-section">
+            <button class="advanced-game-button button">
+              <p class="game-title-button">🦎 ADVANCED 👽</p>
+              <p>
+                Spock & Paper > <b>Rock</b> > Scissors & Lizard<br />
+                Scissors & Lizard > <b>Paper</b> > Spock & Rock<br />
+                Spock & Rock > <b>Scissors</b> > Lizard & Paper<br />
+                Scissors & Rock > <b>Lizard</b> > Spock & Paper<br />
+                Paper & Lizard > <b>Spock</b> > Rock & Scissors<br />
               </p>
             </button>
-          </div>
+          </section>
         </div>
         <div class="result-view hidden">
         </div>
         <div class="normal-game-view hidden">
-          <div class="rules-and-title">
-            <h1 class="game-title">Rock, Paper, Scissors</h1>
-            <h2 class="rules">
-              <ul>
-                <li> Paper > <b>Rock</b> > Scissors </li>
-                <li> Scissors > <b>Paper</b> > Rock </li>
-                <li> Rock > <b>Scissors</b> > Paper </li>
-              </ul>
-            </h2>
-            <h3><b>Choose your fighter</b></h3>
+          <div class="game-title-section">
+            <h2 class="choose-game-title">Rock, Paper, Scissors</h2>
+            <p class="under-title-text">Choose your fighter!</p>
           </div>
           <section class="normal-icons-container" >
-            <img class="normal-rock-icon" id="rock" src="./assets/geodude.png" />
-            <img class="normal-paper-icon" id="paper" src="./assets/paper.png" />
-            <img class="normal-scissors-icon" id="scissors" src="./assets/scissors.png" />
+            <img class="normal-rock-icon icon" id="rock" src="./assets/geodude.png" />
+            <img class="normal-paper-icon icon" id="paper" src="./assets/paper.png" />
+            <img class="normal-scissors-icon icon" id="scissors" src="./assets/scissors.png" />
         </div>
         <div class="advanced-game-view hidden">
-          <h1 class="advanced-game-title">Rock, Paper, Scissors, Lizard, Spock</h1>
+          <div class="game-title-section">
+            <h2 class="choose-game-title">Rock, Paper, Scissors</h2>
+            <p class="under-title-text">Choose your fighter!</p>
+          </div>
           <section class="advanced-icons-container" >
             <div class="advanced-icon-row">
-              <img class="advanced-rock-icon" id="rock" src="./assets/geodude.png" />
-              <img class="advanced-paper-icon" id="paper" src="./assets/paper.png" />
-              <img class="advanced-scissors-icon" id="scissors" src="./assets/scissors.png" />
+              <img class="advanced-rock-icon icon" id="rock" src="./assets/geodude.png" />
+              <img class="advanced-paper-icon icon" id="paper" src="./assets/paper.png" />
+              <img class="advanced-scissors-icon icon" id="scissors" src="./assets/scissors.png" />
             </div>
             <div class="advanced-icon-row">
-              <img class="lizard-icon" id="lizard" src="./assets/lizard.png"/>
-              <img class="spock-icon" id="spock" src="./assets/spock.png"/>
+              <img class="lizard-icon icon" id="lizard" src="./assets/lizard.png"/>
+              <img class="spock-icon icon" id="spock" src="./assets/spock.png"/>
             </div>
         </div>
       </section>
       </section>
-      <aside class="computer-score-column score-column">
-        <h2 class="computer-title">Computer</h2>
-        <h3 class="computer-token"></h3>
-        <p class="computer-score-number"></p>
+      <aside class="score-column">
+        <div class="computer-score-column score-display">
+          <h3 class="computer-token score-token">🤖</h3>
+          <p class="computer-title score-contents">Computer</p>
+          <p class="computer-score-number score-contents">Wins: 0</p>
+        </div>
+        <button class="reset-game-button button hidden">RESET GAME?</button>
       </aside>
     </main>
     <script type="text/javascript" src="player.js"></script>
