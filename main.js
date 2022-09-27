@@ -20,11 +20,13 @@ var resultView = document.querySelector('.result-view')
 
 var normalGameButton = document.querySelector('.normal-game-button')
 var advancedGameButton = document.querySelector('.advanced-game-button')
+var changeGameButton = document.querySelector('.change-game-button')
+console.log(changeGameButton);
 
-
-window.addEventListener('load', chooseGameModeView)
+// window.addEventListener('load', chooseGameModeView)
 normalGameButton.addEventListener('click', showNormalGameView)
 advancedGameButton.addEventListener('click', showAdvancedGameView)
+changeGameButton.addEventListener('click', changeGameModeView)
 
 normalRockIcon.addEventListener('click', function(event){
   event.preventDefault();
@@ -49,7 +51,7 @@ normalScissorsIcon.addEventListener('click', function(event){
   updateScores();
   showResult();
 })
-//
+
 advancedRockIcon.addEventListener('click', function(event){
   event.preventDefault();
   currentGame.makeChoice([event.target.id]);
@@ -73,7 +75,7 @@ advancedScissorsIcon.addEventListener('click', function(event){
   updateScores();
   showResult();
 })
-//
+
 lizardIcon.addEventListener('click', function(event){
   event.preventDefault();
   currentGame.makeChoice([event.target.id]);
@@ -98,6 +100,7 @@ function showResult () {
   normalGameView.className = "normal-game-view hidden"
   chooseGameModeView.className = "choose-game-mode-view hidden"
   advancedGameView.className = "advanced-game-view hidden"
+  changeGameButton.className = "change-game-button hidden"
   if (currentGame.advancedGame){
     setTimeout(timeoutAdvancedView, 3000)
   } else {
@@ -106,13 +109,14 @@ function showResult () {
 
 }
 
-function showAdvancedGameView () {
+function showAdvancedGameView (event) {
   event.preventDefault();
   currentGame.advancedGame = true;
   normalGameView.className = "normal-game-view hidden"
   chooseGameModeView.className = "choose-game-mode-view hidden"
   advancedGameView.className = "advanced-game-view"
   resultView.className = "result-view hidden"
+  changeGameButton.className = "change-game-button"
 }
 
 function timeoutAdvancedView () {
@@ -120,13 +124,16 @@ function timeoutAdvancedView () {
   chooseGameModeView.className = "choose-game-mode-view hidden"
   advancedGameView.className = "advanced-game-view"
   resultView.className = "result-view hidden"
+  changeGameButton.className = "change-game-button"
 }
 
-function chooseGameModeView() {
+function changeGameModeView(event) {
+event.preventDefault();
 normalGameView.className = "normal-game-view hidden"
 advancedGameView.className = "advanced-game-view hidden"
 resultView.className = "result-view hidden"
-
+chooseGameModeView.className = "choose-game-mode-view"
+changeGameButton.className = "change-game-button hidden"
 }
 
 function showNormalGameView(event) {
@@ -136,6 +143,7 @@ function showNormalGameView(event) {
   chooseGameModeView.className = "choose-game-mode-view hidden"
   advancedGameView.className = "advanced-game-view hidden"
   resultView.className = "result-view hidden"
+  changeGameButton.className = "change-game-button"
 }
 
 function timeoutNormalView () {
@@ -143,6 +151,7 @@ function timeoutNormalView () {
   chooseGameModeView.className = "choose-game-mode-view hidden"
   advancedGameView.className = "advanced-game-view hidden"
   resultView.className = "result-view hidden"
+  changeGameButton.className = "change-game-button"
 }
 
 function updateScores(){
