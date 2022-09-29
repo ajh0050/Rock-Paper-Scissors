@@ -1,19 +1,21 @@
 // Global variables
-var human = {name:'Human',token:'🤓'}
-var computer = {name:'Computer',token:'🤖'}
+var human = {name:'Player1'}
+var computer = {name:'Gary'}
 var currentGame = new Game(human,computer)
 
 // DOM elements go here
-var normalRockIcon = document.querySelector('.normal-rock-icon');
-var normalPaperIcon = document.querySelector('.normal-paper-icon');
-var normalScissorsIcon = document.querySelector('.normal-scissors-icon');
+var normalWaterIcon = document.querySelector('.normal-Water-icon');
+var normalFireIcon = document.querySelector('.normal-Fire-icon');
+var normalGrassIcon = document.querySelector('.normal-Grass-icon');
 var humanScoreColumn = document.querySelector('.human-score-column')
 var computerScoreColumn = document.querySelector('.computer-score-column')
-var advancedRockIcon = document.querySelector('.advanced-rock-icon');
-var advancedPaperIcon = document.querySelector('.advanced-paper-icon');
-var advancedScissorsIcon = document.querySelector('.advanced-scissors-icon');
-var lizardIcon = document.querySelector('.lizard-icon')
-var spockIcon = document.querySelector('.spock-icon')
+var advancedWaterIcon = document.querySelector('.advanced-Water-icon');
+var advancedFireIcon = document.querySelector('.advanced-Fire-icon');
+var advancedGrassIcon = document.querySelector('.advanced-Grass-icon');
+var groundIcon = document.querySelector('.Ground-icon')
+var electricIcon = document.querySelector('.Electric-icon')
+var humanScore = document.querySelector('.human-score-number')
+var computerScore = document.querySelector('.computer-score-number')
 
 var normalGameView = document.querySelector('.normal-game-view')
 var chooseGameModeView = document.querySelector('.choose-game-mode-view')
@@ -26,7 +28,7 @@ var changeGameButton = document.querySelector('.change-game-button')
 var resetGameButton = document.querySelector('.reset-game-button')
 
 // Event listeners that use anon functions
-normalRockIcon.addEventListener('click', function(event){
+normalWaterIcon.addEventListener('click', function(event){
   event.preventDefault();
   currentGame.makeChoice([event.target.id]);
   currentGame.runNormalGame();
@@ -34,7 +36,7 @@ normalRockIcon.addEventListener('click', function(event){
   showResult();
 })
 
-normalPaperIcon.addEventListener('click', function(event){
+normalFireIcon.addEventListener('click', function(event){
   event.preventDefault();
   currentGame.makeChoice([event.target.id]);
   currentGame.runNormalGame();
@@ -42,7 +44,7 @@ normalPaperIcon.addEventListener('click', function(event){
   showResult();
 })
 
-normalScissorsIcon.addEventListener('click', function(event){
+normalGrassIcon.addEventListener('click', function(event){
   event.preventDefault();
   currentGame.makeChoice([event.target.id]);
   currentGame.runNormalGame();
@@ -50,7 +52,7 @@ normalScissorsIcon.addEventListener('click', function(event){
   showResult();
 })
 
-advancedRockIcon.addEventListener('click', function(event){
+advancedWaterIcon.addEventListener('click', function(event){
   event.preventDefault();
   currentGame.makeChoice([event.target.id]);
   currentGame.runAdvancedGame();
@@ -58,7 +60,7 @@ advancedRockIcon.addEventListener('click', function(event){
   showResult();
 })
 
-advancedPaperIcon.addEventListener('click', function(event){
+advancedFireIcon.addEventListener('click', function(event){
   event.preventDefault();
   currentGame.makeChoice([event.target.id]);
   currentGame.runAdvancedGame();
@@ -66,7 +68,7 @@ advancedPaperIcon.addEventListener('click', function(event){
   showResult();
 })
 
-advancedScissorsIcon.addEventListener('click', function(event){
+advancedGrassIcon.addEventListener('click', function(event){
   event.preventDefault();
   currentGame.makeChoice([event.target.id]);
   currentGame.runAdvancedGame();
@@ -74,7 +76,7 @@ advancedScissorsIcon.addEventListener('click', function(event){
   showResult();
 })
 
-lizardIcon.addEventListener('click', function(event){
+groundIcon.addEventListener('click', function(event){
   event.preventDefault();
   currentGame.makeChoice([event.target.id]);
   currentGame.runAdvancedGame();
@@ -82,7 +84,7 @@ lizardIcon.addEventListener('click', function(event){
   showResult();
 })
 
-spockIcon.addEventListener('click', function(event){
+electricIcon.addEventListener('click', function(event){
   event.preventDefault();
   currentGame.makeChoice([event.target.id]);
   currentGame.runAdvancedGame();
@@ -138,8 +140,8 @@ function showResult () {
   resultView.innerHTML = `
   <h1 class="result-title">${currentGame.result}</h1>
   <p class="result-choices">
-    You chose - ${currentGame.human.choice} <br />
-    Computer chose - ${currentGame.computer.choice} <br />
+    <img class="result-icon icon" src="./assets/${currentGame.human.choice}.png" />
+    <img class="result-icon icon" src="./assets/${currentGame.computer.choice}.png" />
   </p>
   `;
   resultView.className = "result-view"
@@ -174,15 +176,6 @@ function timeoutAdvancedView () {
 }
 
 function updateScores(){
-  humanScoreColumn.innerHTML = `
-  <h3 class="human-token score-token">${currentGame.human.token}</h3>
-  <p class="human-title score-contents">${currentGame.human.name}</p>
-  <p class="human-score-number score-contents">Wins: ${currentGame.human.wins}</p>
-  `
-
-  computerScoreColumn.innerHTML = `
-  <h3 class="computer-token score-token">${currentGame.computer.token}</h3>
-  <p class="computer-title score-contents">${currentGame.computer.name}</p>
-  <p class="computer-score-number score-contents">Wins: ${currentGame.computer.wins}</p>
-  `
+  humanScore.innerText = `Wins: ${currentGame.human.wins}`;
+  computerScore.innerText = `Wins: ${currentGame.computer.wins}`;
 }

@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  font-family: 'Press Start 2p'
 }
 
 .whole-page-container {
@@ -27,8 +28,9 @@
   align-items: center;
 }
 
-.score-token {
-  font-size: 3em
+.player-icon {
+  height: 20vh;
+  width: 10vw;
 }
 
 .score-contents {
@@ -82,6 +84,7 @@
 
 .under-title-text{
   font-size: 1.5rem;
+  margin-top: 50px;
 }
 
 .game-title-button {
@@ -106,8 +109,9 @@
   font-size: 3rem;
 }
 
-.result-choices {
-  font-size: 1.8rem;
+.result-icon {
+  height: 30vh;
+  width: 20vw;
 }
 
 .normal-game-view {
@@ -124,18 +128,18 @@
   justify-content: space-evenly;
 }
 
-.normal-rock-icon {
-  height: 15vh;
+.normal-Water-icon {
+  height: 30vh;
   width: 20vw;
 }
 
-.normal-paper-icon {
-  height: 20vh;
-  width: 10vw;
+.normal-Fire-icon {
+  height: 30vh;
+  width: 20vw;
 }
 
-.normal-scissors-icon {
-  height: 15vh;
+.normal-Grass-icon {
+  height: 30vh;
   width: 20vw;
 }
 
@@ -158,29 +162,29 @@
   justify-content: space-evenly;
 }
 
-.advanced-rock-icon {
-  height: 15vh;
+.advanced-Water-icon {
+  height: 30vh;
   width: 20vw;
 }
 
-.advanced-scissors-icon {
-  height: 15vh;
+.advanced-Grass-icon {
+  height: 30vh;
   width: 20vw;
 }
 
-.advanced-paper-icon {
-  height: 20vh;
-  width: 10vw;
+.advanced-Fire-icon {
+  height: 30vh;
+  width: 20vw;
 }
 
-.spock-icon {
-  height: 15vh;
-  width: 15vw;
+.Electric-icon {
+  height: 30vh;
+  width: 20vw;
 }
 
-.lizard-icon {
-  height: 20vh;
-  width: 10vw;
+.Ground-icon {
+  height: 30vh;
+  width: 20vw;
 }
 
 .hidden {
