@@ -151,9 +151,9 @@ function showResult () {
   changeGameButton.className = "change-game-button button hidden"
   resetGameButton.className = "reset-game-button button hidden"
   if (currentGame.advancedGame){
-    setTimeout(timeoutAdvancedView, 2500)
+    setTimeout(timeoutAdvancedView, 3000)
   } else {
-    setTimeout(timeoutNormalView, 2500)
+    setTimeout(timeoutNormalView, 3000)
   }
 }
 

@@ -14,7 +14,7 @@
 .score-column {
   height: 100vh;
   width: 15vw;
-  background-color: #E47AEE;
+  background-color: #3162D3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +38,7 @@
 }
 
 .button {
-  background-color: #9407A1;
+  background-color: #4E75CE;
   border: none;
   padding: 15px;
   color: white;
@@ -57,7 +57,7 @@
 .game-board {
   height: 100vh;
   width: 70vw;
-  background-color: #BF55C9;
+  background-color: #294A96;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -107,6 +107,10 @@
 
 .result-title {
   font-size: 3rem;
+}
+
+.result-choices {
+  margin-top: 100px;
 }
 
 .result-icon {

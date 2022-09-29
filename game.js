@@ -8,9 +8,9 @@ class Game {
   makeChoice(choice){
     this.human.choice = choice;
     if (!this.advancedGame) {
-      var choices = ['Water','Fire','Grass']
+      var choices = ['water','fire','grass']
     } else {
-      var choices = ['Water','Fire','Grass','Ground','Electric']
+      var choices = ['water','fire','grass','ground','electric']
     };
 
     var choiceIndex = Math.floor(Math.random() * choices.length);
@@ -18,22 +18,22 @@ class Game {
   }
 
   runNormalGame () {
-    if (this.human.choice == 'Water' && this.computer.choice =='Grass') {
+    if (this.human.choice == 'water' && this.computer.choice =='grass') {
       this.computer.wins++
       this.result = `${this.computer.name} wins`
-    } else if (this.human.choice == 'Water' && this.computer.choice =='Fire') {
+    } else if (this.human.choice == 'water' && this.computer.choice =='fire') {
       this.human.wins++
       this.result = `${this.human.name} wins`
-    } else if (this.human.choice == 'Fire' && this.computer.choice == 'Water'){
+    } else if (this.human.choice == 'fire' && this.computer.choice == 'water'){
       this.computer.wins++
       this.result = `${this.computer.name} wins`
-    } else if (this.human.choice == 'Fire' && this.computer.choice == 'Grass'){
+    } else if (this.human.choice == 'fire' && this.computer.choice == 'grass'){
       this.human.wins++
       this.result = `${this.human.name} wins`
-    } else if (this.human.choice == 'Grass' && this.computer.choice == 'Fire'){
+    } else if (this.human.choice == 'grass' && this.computer.choice == 'fire'){
       this.computer.wins++
       this.result = `${this.computer.name} wins`
-    } else if (this.human.choice == 'Grass' && this.computer.choice == 'Water'){
+    } else if (this.human.choice == 'grass' && this.computer.choice == 'water'){
       this.human.wins++
       this.result = `${this.human.name} wins`
     } else {
@@ -42,34 +42,34 @@ class Game {
   }
 
   runAdvancedGame() {
-    if (this.human.choice == 'Water' && (this.computer.choice == 'Electric' || this.computer.choice == 'Grass')) {
+    if (this.human.choice == 'water' && (this.computer.choice == 'electric' || this.computer.choice == 'grass')) {
       this.computer.wins++
       this.result = `${this.computer.name} wins`
-    } else if (this.human.choice == 'Water' && (this.computer.choice == 'Fire' || this.computer.choice == 'Ground')){
+    } else if (this.human.choice == 'water' && (this.computer.choice == 'fire' || this.computer.choice == 'ground')){
       this.human.wins++
       this.result = `${this.human.name} wins`
-    } else if (this.human.choice == 'Fire' && (this.computer.choice == 'Water' || this.computer.choice == 'Ground' )){
+    } else if (this.human.choice == 'fire' && (this.computer.choice == 'water' || this.computer.choice == 'ground' )){
       this.computer.wins++
       this.result = `${this.computer.name} wins`
-    } else if (this.human.choice == 'Fire' && (this.computer.choice == 'Electric' || this.computer.choice == 'Grass')){
+    } else if (this.human.choice == 'fire' && (this.computer.choice == 'electric' || this.computer.choice == 'grass')){
       this.human.wins++
       this.result = `${this.human.name} wins`
-    } else if (this.human.choice == 'Grass' && (this.computer.choice == 'Electric' || this.computer.choice == 'Fire')){
+    } else if (this.human.choice == 'grass' && (this.computer.choice == 'electric' || this.computer.choice == 'fire')){
       this.computer.wins++
       this.result = `${this.computer.name} wins`
-    } else if (this.human.choice == 'Grass' && (this.computer.choice == 'Ground' || this.computer.choice == 'Water')){
+    } else if (this.human.choice == 'grass' && (this.computer.choice == 'ground' || this.computer.choice == 'water')){
       this.human.wins++
       this.result = `${this.human.name} wins`
-    } else if (this.human.choice == 'Ground' && (this.computer.choice == 'Grass' || this.computer.choice == 'Water')){
+    } else if (this.human.choice == 'ground' && (this.computer.choice == 'grass' || this.computer.choice == 'water')){
       this.computer.wins++
       this.result = `${this.computer.name} wins`
-    } else if (this.human.choice == 'Ground' && (this.computer.choice == 'Electric' || this.computer.choice == 'Fire')){
+    } else if (this.human.choice == 'ground' && (this.computer.choice == 'electric' || this.computer.choice == 'fire')){
       this.human.wins++
       this.result = `${this.human.name} wins`
-    } else if (this.human.choice == 'Electric' && (this.computer.choice == 'Fire' || this.computer.choice == 'Ground')){
+    } else if (this.human.choice == 'electric' && (this.computer.choice == 'fire' || this.computer.choice == 'ground')){
       this.computer.wins++
       this.result = `${this.computer.name} wins`
-    } else if (this.human.choice == 'Electric' && (this.computer.choice == 'Water' || this.computer.choice == 'Grass')){
+    } else if (this.human.choice == 'electric' && (this.computer.choice == 'water' || this.computer.choice == 'grass')){
       this.human.wins++
       this.result = `${this.human.name} wins`
     } else {
